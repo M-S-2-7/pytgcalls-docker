@@ -1,4 +1,4 @@
-FROM python:latest
+FROM node:latest AS core
 COPY . ./pytgcalls-docker
 WORKDIR ./pytgcalls-docker
 RUN apt install nodejs
@@ -8,6 +8,8 @@ RUN npm install
 RUN npm run prepare
 WORKDIR pytgcalls
 RUN npm install
-RUN pip install -r requirements.txt
 RUN npm i socket.io-client
+
+FROM python:latest
 WORKDIR /pytgcalls-docker
+RUN pip install -r requirements.txt
