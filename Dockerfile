@@ -1,7 +1,6 @@
 FROM node:latest AS core
-COPY . ./pytgcalls-docker
-WORKDIR ./pytgcalls-docker
-WORKDIR pytgcalls
+COPY . /pytgcalls-docker
+WORKDIR pytgcalls-docker/pytgcalls
 RUN npm install
 RUN npm run prepare
 WORKDIR pytgcalls
