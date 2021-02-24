@@ -1,0 +1,3 @@
+[submodule "pytgcalls"]
+	path = pytgcalls
+	url = https://github.com/M-S-2-7/pytgcalls
