@@ -1,5 +1,4 @@
 FROM python:latest
-MKDIR ./pytgcalls-docker
 COPY . ./pytgcalls-docker
 WORKDIR ./pytgcalls-docker
 RUN apt install nodejs
