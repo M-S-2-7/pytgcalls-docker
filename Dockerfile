@@ -1,8 +1,6 @@
 FROM node:latest AS core
 COPY . ./pytgcalls-docker
 WORKDIR ./pytgcalls-docker
-RUN apt install nodejs
-RUN apt install npm
 WORKDIR pytgcalls
 RUN npm install
 RUN npm run prepare
